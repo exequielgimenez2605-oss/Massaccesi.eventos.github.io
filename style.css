@@ -58,11 +58,10 @@ html, body {
   text-align: center;
   font-size: 4rem;
   color: rgb(235, 215, 102);
-  text-shadow:
-    2px 2px 4px rgba(0, 0, 0, 0.5),
-    -2px -2px 4px rgba(0, 0, 0, 0.5),
-    -2px 2px 4px rgba(0, 0, 0, 0.5),
-    2px -2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+               -2px -2px 4px rgba(0, 0, 0, 0.5),
+               -2px 2px 4px rgba(0, 0, 0, 0.5),
+               2px -2px rgba(0, 0, 0, 0.5);
   font-style: italic;
   z-index: 2;
   pointer-events: none;
@@ -82,8 +81,8 @@ html, body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }   
-  to   { opacity: 1; }  
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ==================== */
@@ -107,34 +106,47 @@ html, body {
   position: relative;
   background: rgba(0,0,0,0.6);
   box-shadow: 0 0 30px #ff6600, 0 0 60px #ff3300, 0 0 90px #ff0000;
-  animation: fuego 1s infinite alternate;
+  animation: fuego 2s infinite alternate ease-in-out;
 }
 
 @media (max-width: 500px) {
   .Sobre-nosotros .recuadro-fuego {
-    width: 90%;
     padding: clamp(15px, 3vw, 30px);
   }
 }
 
 @keyframes fuego {
-  0% { box-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300, 0 0 30px #ff0000; }
-  50% { box-shadow: 0 0 20px #ff9900, 0 0 40px #ff6600, 0 0 60px #ff3300; }
-  100% { box-shadow: 0 0 15px #ffcc00, 0 0 30px #ff9900, 0 0 45px #ff6600; }
+  0% {
+    box-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300, 0 0 30px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 30px #ff9900, 0 0 50px #ff6600, 0 0 70px #ff3300;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff6600, 0 0 40px #ff3300, 0 0 60px #ff0000;
+  }
 }
 
 .Sobre-nosotros .recuadro-fuego h2 {
   color: orange;
   font-size: clamp(3rem, 5vw, 5rem);
   margin-bottom: 20px;
-  text-shadow: 0 0 5px #ff4d00, 0 0 10px #ff6600, 0 0 20px #ff0000;
+  text-shadow: 0 0 5px #000, 0 0 5px #ff4d00, 0 0 10px #ff6600, 0 0 20px #ff0000;
 }
 
 .Sobre-nosotros .recuadro-fuego p {
-  font-size: clamp(2rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2.38rem);
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
+  text-shadow: 0 0 3px #000;
+}
+
+/* Aumentar un poco el tamaño del p en celulares */
+@media (max-width: 500px) {
+  .Sobre-nosotros .recuadro-fuego p {
+    font-size: clamp(2rem, 4vw, 2rem);
+  }
 }
 
 /* ==================== */
@@ -203,6 +215,152 @@ html, body {
 }
 
 /* ==================== */
+/* FOTOS DE LOS EVENTOS */
+/* ==================== */
+.Fotos-eventos {
+  width: 100%;
+  margin: 5% auto;
+  text-align: center;
+}
+
+.Fotos-eventos .recuadro-eventos {
+  position: relative;
+  padding: clamp(30px, 5vw, 50px);
+  border-radius: 30px;
+  width: 90%;
+  max-width: 1070px;
+  min-height: 180px; /* grande como Sobre Nosotros */
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+
+/* IMAGEN DE FONDO */
+.Fotos-eventos .recuadro-eventos .fondo-recuadro {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.50;
+  z-index: 1;
+}
+
+/* TEXTO ENCIMA DE LA FOTO */
+.Fotos-eventos .recuadro-eventos h2,
+.Fotos-eventos .recuadro-eventos p {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* H2 estilo */
+.Fotos-eventos .recuadro-eventos h2 {
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  margin-bottom: 20px;
+}
+
+/* Texto tamaño igual que servicios */
+.Fotos-eventos .recuadro-eventos p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==================== */
+/* MINI RECUADRO DE CONTRASEÑA */
+.Fotos-eventos .mini-recuadro {
+  display: inline-block;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  max-width: 300px;
+  width: 80%;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+/* Input y botón dentro del mini recuadro */
+.Fotos-eventos .mini-recuadro input[type="password"] {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Fotos-eventos .mini-recuadro button {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(240, 239, 233);
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Fotos-eventos .mini-recuadro button:hover {
+  background-color: #e7d8ae;
+}
+
+.Fotos-eventos .mini-recuadro #mensaje {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* ==================== */
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 500px) {
+  .Fotos-eventos .recuadro-eventos {
+    padding: 20px;
+    min-height: 180px;
+  }
+
+  .Fotos-eventos .recuadro-eventos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .Fotos-eventos .recuadro-eventos p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.5;
+  }
+
+  .Fotos-eventos .mini-recuadro {
+    width: 90%;
+    padding: 12px 15px;
+    margin-top: 15px;
+  }
+
+  .Fotos-eventos .mini-recuadro input[type="password"] {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .Fotos-eventos .mini-recuadro button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .Fotos-eventos .mini-recuadro #mensaje {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==================== */
 /* BURBUJA DE INSTAGRAM */
 /* ==================== */
 .burbuja-derecha {
@@ -211,7 +369,7 @@ html, body {
   right: 10px;
   width: 45px;
   height: 45px;
-  background-color: #00000000;
+  background-color: transparent;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -243,7 +401,7 @@ html, body {
   position: absolute;
   top: 8px;
   right: 32px;
-  transform: translateY(0); 
+  transform: translateY(0);
   transition: opacity 0.3s;
   white-space: nowrap;
   font-size: 20px;
@@ -254,12 +412,13 @@ html, body {
   visibility: visible;
   opacity: 1;
 }
+
 /* ==================== */
-/*       CREDITOS       */
+/* CREDITOS */
 /* ==================== */
 .webDesign-credit {
   display: block;
-  width: fit-content;      /* el ancho se ajusta al contenido */
+  width: fit-content;
   margin: auto;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -272,7 +431,7 @@ html, body {
 }
 
 /* ==================== */
-/* FOOTER / COPYRIGHT   */
+/* FOOTER / COPYRIGHT */
 /* ==================== */
 .footer {
   font-family: Arial, Helvetica, sans-serif;
@@ -283,5 +442,4 @@ html, body {
   margin-top: 50px;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
-  
 }
