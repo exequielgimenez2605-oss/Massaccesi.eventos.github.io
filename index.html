@@ -86,9 +86,8 @@
         <div class="recuadro-eventos"> 
             <img src="recuadroFoto.png" alt="Camara-fotos-eventos" class="fondo-recuadro" />    
             <h2><u>Fotos de eventos</u></h2> 
-            <p>En este apartado podras encontrar el link con la direccion de tu evento.</p> 
-            <P>Cuando ingreses al link, te va a pedir una contraseña, la cual estará en</P>
-            <p>en el centro de mesa de tu evento! guardala y esperá para poder ver las fotos!</p>
+            <p>¡Este apartado es exclusivo de los eventos!</p>
+            <P>En el centro de mesa podrás encontrar la contraseña la cual te llevará a un drive donde podras ver todas las fotos.</P>
             
             <div class="mini-recuadro">
             <input type="password" id="passwordInput" placeholder="Contraseña">
@@ -124,7 +123,7 @@
         if(btnVerFotos && inputPassword && mensaje) {
           btnVerFotos.addEventListener("click", () => {
             if(inputPassword.value === "EVENTO2025") {
-              window.location.href = "https://drive.google.com/drive/folders/1ZNRxGJllAgiz4-AQDZOjfmDnKl8HLg9c?usp=sharing";
+              window.location.href = "https://drive.google.com/drive/folders/1ZNRxGJllAgiz4-AQDZOjfmDnKl8HLg9c?usp=sharing  ";
             } else {
               mensaje.textContent = "Contraseña incorrecta. Intenta de nuevo.";
             }
