@@ -1,1 +1,1 @@
-realizacion de pagina y mantenimiento para proyecto de comidas.
+Mi primer proyecto personal. sobre un emprendimiento familiar sobre venta de servicio de catering/comida/personalizado etc. en este proyecto busqué ser profesional en base a mis conocimientos de html y css. intenté simular un menú de servicios en el cual el interesado pueda ingresar al wpp y poder preguntar sobre el servicio a adquirir. 
