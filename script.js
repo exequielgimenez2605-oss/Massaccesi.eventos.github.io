@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Cambia "EVENTO2025" por tu contraseña real
       if(inputPassword.value === "EVENTO2025") {
         // Redirige al link de Drive
-        window.location.href = "https://drive.google.com/drive/folders/1p67gQRxl5doOH_HVlhqHD030oDCY9ln-?usp=drive_link";
+        window.location.href = "https://drive.google.com/drive/folders/1ZNRxGJllAgiz4-AQDZOjfmDnKl8HLg9c";
       } else {
         mensaje.textContent = "Contraseña incorrecta. Intenta de nuevo.";
       }
