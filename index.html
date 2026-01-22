@@ -114,26 +114,7 @@
 
     <!-- Link al archivo de script externo --> 
     <!-- ...existing code... -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const btnVerFotos = document.getElementById("btnVerFotos");
-        const inputPassword = document.getElementById("passwordInput");
-        const mensaje = document.getElementById("mensaje");
 
-        if(btnVerFotos && inputPassword && mensaje) {
-          btnVerFotos.addEventListener("click", () => {
-            if(inputPassword.value === "EVENTO2025") {
-              window.location.href = "https://drive.google.com/drive/folders/1ZNRxGJllAgiz4-AQDZOjfmDnKl8HLg9c?usp=sharing  ";
-            } else {
-              mensaje.textContent = "Contraseña incorrecta. Intenta de nuevo.";
-            }
-          });
-          
-          inputPassword.addEventListener("input", () => {
-            mensaje.textContent = "";
-          });
-        }
-      });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

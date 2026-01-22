@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const servicio = boton.getAttribute("data-servicio") || "servicio";
       const mensaje = `Hola! Como estas?, me gustaria pedirte info sobre el ${servicio}`;
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, "_blank");
+      window.location.href = url;
     });
   });
 
